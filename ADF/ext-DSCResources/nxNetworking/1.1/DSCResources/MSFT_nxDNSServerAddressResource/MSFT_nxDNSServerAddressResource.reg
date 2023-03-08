@@ -1,0 +1,3 @@
+LIBRARY=MSFT_nxDNSServerAddressResource
+HOSTING=@requestor@
+CLASS=MSFT_nxDNSServerAddressResource:OMI_BaseResource

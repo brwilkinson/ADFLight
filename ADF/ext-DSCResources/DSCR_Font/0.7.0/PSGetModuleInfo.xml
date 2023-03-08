@@ -1,0 +1,117 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">DSCR_Font</S>
+      <S N="Version">0.7.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">PowerShell DSC Resource to add / remove Font.</S>
+      <S N="Author">mkht</S>
+      <S N="CompanyName">mkht</S>
+      <S N="Copyright">(c) 2021 mkht. All rights reserved.</S>
+      <DT N="PublishedDate">2021-03-14T08:17:29-07:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/mkht/DSCR_Font/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/mkht/DSCR_Font</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResource</S>
+          <S>Font</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>cFont</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="5">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="6">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2021 mkht. All rights reserved.</S>
+          <S N="description">PowerShell DSC Resource to add / remove Font.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">311</S>
+          <S N="downloadCount">5133</S>
+          <S N="packageSize">9146</S>
+          <S N="published">3/14/2021 8:17:29 AM -07:00</S>
+          <S N="created">3/14/2021 8:17:29 AM -07:00</S>
+          <S N="lastUpdated">11/15/2021 3:56:54 AM -08:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResource Font PSModule PSDscResource_cFont PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-11-15T03:56:54Z</S>
+          <S N="NormalizedVersion">0.7.0</S>
+          <S N="Authors">mkht</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">DSCR_Font.nuspec|DSCR_Font.psd1|LICENSE|README.md|DSCResources\cFont\cFont.psm1|DSCResources\cFont\cFont.schema.mof|Sample\DSCRFont_Sample.ps1</S>
+          <S N="GUID">c8a4a363-3b1f-444f-913b-3362f69e6c27</S>
+          <S N="PowerShellVersion">5.0</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">D:\Repos\ADF\ADF\1-PrereqsToDeploy\DSCResources\DSCR_Font\0.7.0</S>
+    </MS>
+  </Obj>
+</Objs>

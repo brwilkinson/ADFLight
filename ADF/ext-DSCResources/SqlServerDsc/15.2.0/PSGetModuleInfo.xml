@@ -1,0 +1,167 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">SqlServerDsc</S>
+      <S N="Version">15.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Module with DSC resources for deployment and configuration of Microsoft SQL Server.</S>
+      <S N="Author">DSC Community</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PowerShellTeam</S>
+          <S>gaelcolas</S>
+          <S>dsccommunity</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">Copyright the DSC Community contributors. All rights reserved.</S>
+      <DT N="PublishedDate">2021-09-01T13:39:54-07:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/dsccommunity/SqlServerDsc/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/dsccommunity/SqlServerDsc</URI>
+      <URI N="IconUri">https://dsccommunity.org/images/DSC_Logo_300p.png</URI>
+      <Obj N="Tags" RefId="2">
+        <TNRef RefId="1" />
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResourceKit</S>
+          <S>DSCResource</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>SqlAG</S>
+                <S>SqlAGDatabase</S>
+                <S>SqlAgentAlert</S>
+                <S>SqlAgentFailsafe</S>
+                <S>SqlAgentOperator</S>
+                <S>SqlAGListener</S>
+                <S>SqlAGReplica</S>
+                <S>SqlAlias</S>
+                <S>SqlAlwaysOnService</S>
+                <S>SqlConfiguration</S>
+                <S>SqlDatabase</S>
+                <S>SqlDatabaseDefaultLocation</S>
+                <S>SqlDatabaseMail</S>
+                <S>SqlDatabaseObjectPermission</S>
+                <S>SqlDatabasePermission</S>
+                <S>SqlDatabaseRole</S>
+                <S>SqlDatabaseUser</S>
+                <S>SqlEndpoint</S>
+                <S>SqlEndpointPermission</S>
+                <S>SqlLogin</S>
+                <S>SqlMaxDop</S>
+                <S>SqlMemory</S>
+                <S>SqlPermission</S>
+                <S>SqlProtocol</S>
+                <S>SqlProtocolTcpIp</S>
+                <S>SqlReplication</S>
+                <S>SqlRole</S>
+                <S>SqlRS</S>
+                <S>SqlRSSetup</S>
+                <S>SqlScript</S>
+                <S>SqlScriptQuery</S>
+                <S>SqlSecureConnection</S>
+                <S>SqlServiceAccount</S>
+                <S>SqlSetup</S>
+                <S>SqlTraceFlag</S>
+                <S>SqlWaitForAG</S>
+                <S>SqlWindowsFirewall</S>
+                <S>SqlDatabaseOwner</S>
+                <S>SqlDatabaseRecoveryModel</S>
+                <S>SqlServerEndpointState</S>
+                <S>SqlServerNetwork</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">## [15.2.0] - 2021-09-01_x000A__x000D__x000A_### Changed_x000D__x000A__x000D__x000A_- SqlServerDsc_x000D__x000A_  - Changed to the new GitHub deploy tasks that is required for the latest_x000D__x000A_    version of the Sampler module._x000D__x000A_  - Updated pipeline configuration to align with the latest changes in [Sampler](https://github.com/gaelcolas/Sampler)._x000D__x000A_  - Update codecov.yml to support carry forward flags._x000D__x000A_  - Updated pipelines files to latest from Sampler project._x000D__x000A_  - Updated GitHub issue templates._x000D__x000A_  - Remove pipeline jobs `Test_Integration_SQL2016`, `Test_Integration_SQL2017`,_x000D__x000A_    and `Test_Integration_SQL2019` and raplaced with a single job_x000D__x000A_    `Test_Integration` ([issue #1713](https://github.com/dsccommunity/SqlServerDsc/issues/1713))._x000D__x000A_  - Update HQRM tests to run on the VM image `windows-2022`._x000D__x000A_  - Update unit tests to run on the VM image `windows-2022`._x000D__x000A_  - Update integration tests to run both on Windows Server 2019 and Windows_x000D__x000A_    Server 2022 ([issue #1713](https://github.com/dsccommunity/SqlServerDsc/issues/1713))._x000D__x000A_- SqlSetup_x000D__x000A_  - The helper function `Connect-SqlAnalysis` was using `LoadWithPartial()`_x000D__x000A_    to load the assembly _Microsoft.AnalysisServices_. On a node where multiple_x000D__x000A_    instances with different versions of SQL Server (regardless of features)_x000D__x000A_    is installed, this will result in the first assembly found in the_x000D__x000A_    GAC will be loaded into the session, not taking versions into account._x000D__x000A_    This can result in an assembly version being loaded that is not compatible_x000D__x000A_    with the version of SQL Server it was meant to be used with._x000D__x000A_    A new method of loading the assembly _Microsoft.AnalysisServices_ was_x000D__x000A_    introduced under a feature flag; `'AnalysisServicesConnection'`._x000D__x000A_    This new functionality depends on the [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module, and must be present on the node. The [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module can be installed on the node by leveraging the new DSC resource_x000D__x000A_    `PSModule` in the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet/2.1.2)_x000D__x000A_    module (v2.1.2 and higher). This new method does not work with the_x000D__x000A_    SQLPS module due to the SQLPS module does not load the correct assembly,_x000D__x000A_    while [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module (v21.1.18080 and above) does. The new functionality is used_x000D__x000A_    when the parameter `FeatureFlag` is set to `'AnalysisServicesConnection'`._x000D__x000A_    This functionality will be the default in a future breaking release._x000D__x000A_  - Under a feature flag `'AnalysisServicesConnection'`. The detection of_x000D__x000A_    a successful connection to the SQL Server Analysis Services has also been_x000D__x000A_    changed. Now it actually evaluates the property `Connected` of the returned_x000D__x000A_    `Microsoft.AnalysisServices.Server` object. The new functionality is used_x000D__x000A_    when the parameter `FeatureFlag` is set to `'AnalysisServicesConnection'`._x000D__x000A_    This functionality will be the default in a future breaking release._x000D__x000A_- SqlAgentAlert_x000D__x000A_  - Switched README file with SqlAgentFailsafe ([issue #1709](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A_- SqlAgentFailsafe_x000D__x000A_  - Switched README file with SqlAgentAlert ([issue #1709](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A__x000D__x000A_### Added_x000D__x000A__x000D__x000A_- SqlMemory_x000D__x000A_  - Added two new optional parameters MinMemoryPercent and MaxMemoryPercent._x000D__x000A_    Provides the ability to set the minimum and/or maximum buffer pool used by_x000D__x000A_    the SQL Server instance as a percentage of total server memory._x000D__x000A_    ([issue #1397](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A_- SqlRSSetup_x000D__x000A_  - Integration tests now install _Microsoft SQL Server 2019 Reporting Services__x000D__x000A_    ([issue #1717](https://github.com/dsccommunity/SqlServerDsc/issues/1717))._x000D__x000A_- SqlRS_x000D__x000A_  - Integration tests now configures _Microsoft SQL Server 2019 Reporting Services_._x000D__x000A__x000D__x000A_### Fixed_x000D__x000A__x000D__x000A_- SqlSetup_x000D__x000A_  - Fixed integration tests for SQL Server 2016 and SQL Server 2017._x000D__x000A_- SqlServerDsc.Common_x000D__x000A_  - Fixed so that _CredScan_ no longer reports a password false-positive_x000D__x000A_    ([issue #1712](https://github.com/dsccommunity/SqlServerDsc/issues/1712))._x000D__x000A_- SqlRS_x000D__x000A_  - Fixed SSRS 2019 initialization ([issue #1509](https://github.com/dsccommunity/SqlServerDsc/issues/1509))._x000D__x000A_  - Fix a problem that did not correctly evaluate the `UseSSL` property against_x000D__x000A_    the current state.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Copyright the DSC Community contributors. All rights reserved.</S>
+          <S N="description">Module with DSC resources for deployment and configuration of Microsoft SQL Server.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">## [15.2.0] - 2021-09-01_x000A__x000D__x000A_### Changed_x000D__x000A__x000D__x000A_- SqlServerDsc_x000D__x000A_  - Changed to the new GitHub deploy tasks that is required for the latest_x000D__x000A_    version of the Sampler module._x000D__x000A_  - Updated pipeline configuration to align with the latest changes in [Sampler](https://github.com/gaelcolas/Sampler)._x000D__x000A_  - Update codecov.yml to support carry forward flags._x000D__x000A_  - Updated pipelines files to latest from Sampler project._x000D__x000A_  - Updated GitHub issue templates._x000D__x000A_  - Remove pipeline jobs `Test_Integration_SQL2016`, `Test_Integration_SQL2017`,_x000D__x000A_    and `Test_Integration_SQL2019` and raplaced with a single job_x000D__x000A_    `Test_Integration` ([issue #1713](https://github.com/dsccommunity/SqlServerDsc/issues/1713))._x000D__x000A_  - Update HQRM tests to run on the VM image `windows-2022`._x000D__x000A_  - Update unit tests to run on the VM image `windows-2022`._x000D__x000A_  - Update integration tests to run both on Windows Server 2019 and Windows_x000D__x000A_    Server 2022 ([issue #1713](https://github.com/dsccommunity/SqlServerDsc/issues/1713))._x000D__x000A_- SqlSetup_x000D__x000A_  - The helper function `Connect-SqlAnalysis` was using `LoadWithPartial()`_x000D__x000A_    to load the assembly _Microsoft.AnalysisServices_. On a node where multiple_x000D__x000A_    instances with different versions of SQL Server (regardless of features)_x000D__x000A_    is installed, this will result in the first assembly found in the_x000D__x000A_    GAC will be loaded into the session, not taking versions into account._x000D__x000A_    This can result in an assembly version being loaded that is not compatible_x000D__x000A_    with the version of SQL Server it was meant to be used with._x000D__x000A_    A new method of loading the assembly _Microsoft.AnalysisServices_ was_x000D__x000A_    introduced under a feature flag; `'AnalysisServicesConnection'`._x000D__x000A_    This new functionality depends on the [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module, and must be present on the node. The [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module can be installed on the node by leveraging the new DSC resource_x000D__x000A_    `PSModule` in the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet/2.1.2)_x000D__x000A_    module (v2.1.2 and higher). This new method does not work with the_x000D__x000A_    SQLPS module due to the SQLPS module does not load the correct assembly,_x000D__x000A_    while [SqlServer](https://www.powershellgallery.com/packages/SqlServer)_x000D__x000A_    module (v21.1.18080 and above) does. The new functionality is used_x000D__x000A_    when the parameter `FeatureFlag` is set to `'AnalysisServicesConnection'`._x000D__x000A_    This functionality will be the default in a future breaking release._x000D__x000A_  - Under a feature flag `'AnalysisServicesConnection'`. The detection of_x000D__x000A_    a successful connection to the SQL Server Analysis Services has also been_x000D__x000A_    changed. Now it actually evaluates the property `Connected` of the returned_x000D__x000A_    `Microsoft.AnalysisServices.Server` object. The new functionality is used_x000D__x000A_    when the parameter `FeatureFlag` is set to `'AnalysisServicesConnection'`._x000D__x000A_    This functionality will be the default in a future breaking release._x000D__x000A_- SqlAgentAlert_x000D__x000A_  - Switched README file with SqlAgentFailsafe ([issue #1709](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A_- SqlAgentFailsafe_x000D__x000A_  - Switched README file with SqlAgentAlert ([issue #1709](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A__x000D__x000A_### Added_x000D__x000A__x000D__x000A_- SqlMemory_x000D__x000A_  - Added two new optional parameters MinMemoryPercent and MaxMemoryPercent._x000D__x000A_    Provides the ability to set the minimum and/or maximum buffer pool used by_x000D__x000A_    the SQL Server instance as a percentage of total server memory._x000D__x000A_    ([issue #1397](https://github.com/dsccommunity/SqlServerDsc/issues/1397))._x000D__x000A_- SqlRSSetup_x000D__x000A_  - Integration tests now install _Microsoft SQL Server 2019 Reporting Services__x000D__x000A_    ([issue #1717](https://github.com/dsccommunity/SqlServerDsc/issues/1717))._x000D__x000A_- SqlRS_x000D__x000A_  - Integration tests now configures _Microsoft SQL Server 2019 Reporting Services_._x000D__x000A__x000D__x000A_### Fixed_x000D__x000A__x000D__x000A_- SqlSetup_x000D__x000A_  - Fixed integration tests for SQL Server 2016 and SQL Server 2017._x000D__x000A_- SqlServerDsc.Common_x000D__x000A_  - Fixed so that _CredScan_ no longer reports a password false-positive_x000D__x000A_    ([issue #1712](https://github.com/dsccommunity/SqlServerDsc/issues/1712))._x000D__x000A_- SqlRS_x000D__x000A_  - Fixed SSRS 2019 initialization ([issue #1509](https://github.com/dsccommunity/SqlServerDsc/issues/1509))._x000D__x000A_  - Fix a problem that did not correctly evaluate the `UseSSL` property against_x000D__x000A_    the current state.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">551745</S>
+          <S N="downloadCount">4790488</S>
+          <S N="packageSize">357218</S>
+          <S N="published">9/1/2021 1:39:54 PM -07:00</S>
+          <S N="created">9/1/2021 1:39:54 PM -07:00</S>
+          <S N="lastUpdated">11/15/2021 3:56:54 AM -08:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResourceKit DSCResource PSModule PSDscResource_SqlAG PSDscResource_SqlAGDatabase PSDscResource_SqlAgentAlert PSDscResource_SqlAgentFailsafe PSDscResource_SqlAgentOperator PSDscResource_SqlAGListener PSDscResource_SqlAGReplica PSDscResource_SqlAlias PSDscResource_SqlAlwaysOnService PSDscResource_SqlConfiguration PSDscResource_SqlDatabase PSDscResource_SqlDatabaseDefaultLocation PSDscResource_SqlDatabaseMail PSDscResource_SqlDatabaseObjectPermission PSDscResource_SqlDatabasePermission PSDscResource_SqlDatabaseRole PSDscResource_SqlDatabaseUser PSDscResource_SqlEndpoint PSDscResource_SqlEndpointPermission PSDscResource_SqlLogin PSDscResource_SqlMaxDop PSDscResource_SqlMemory PSDscResource_SqlPermission PSDscResource_SqlProtocol PSDscResource_SqlProtocolTcpIp PSDscResource_SqlReplication PSDscResource_SqlRole PSDscResource_SqlRS PSDscResource_SqlRSSetup PSDscResource_SqlScript PSDscResource_SqlScriptQuery PSDscResource_SqlSecureConnection PSDscResource_SqlServiceAccount PSDscResource_SqlSetup PSDscResource_SqlTraceFlag PSDscResource_SqlWaitForAG PSDscResource_SqlWindowsFirewall PSDscResource_SqlDatabaseOwner PSDscResource_SqlDatabaseRecoveryModel PSDscResource_SqlServerEndpointState PSDscResource_SqlServerNetwork PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-11-15T03:56:54Z</S>
+          <S N="NormalizedVersion">15.2.0</S>
+          <S N="Authors">DSC Community</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">SqlServerDsc.nuspec|DSCResources\DSC_SqlMaxDop\DSC_SqlMaxDop.psm1|SqlServerDsc.psd1|DSCResources\DSC_SqlMaxDop\README.md|en-US\about_SqlServerDsc.help.txt|DSCResources\DSC_SqlAgentOperator\DSC_SqlAgentOperator.schema.mof|DSCResources\DSC_SqlProtocol\DSC_SqlProtocol.schema.mof|DSCResources\DSC_SqlAgentOperator\README.md|DSCResources\DSC_SqlProtocol\DSC_SqlProtocol.psm1|DSCResources\DSC_SqlAgentOperator\DSC_SqlAgentOperator.psm1|DSCResources\DSC_SqlProtocol\README.md|DSCResources\MSFT_SqlDatabaseOwner\MSFT_SqlDatabaseOwner.schema.mof|DSCResources\DSC_SqlWaitForAG\DSC_SqlWaitForAG.psm1|DSCResources\MSFT_SqlDatabaseOwner\README.md|DSCResources\DSC_SqlWaitForAG\README.md|DSCResources\MSFT_SqlDatabaseOwner\MSFT_SqlDatabaseOwner.psm1|DSCResources\DSC_SqlWaitForAG\DSC_SqlWaitForAG.schema.mof|DSCResources\DSC_SqlDatabase\DSC_SqlDatabase.schema.mof|DSCResources\DSC_SqlServiceAccount\DSC_SqlServiceAccount.schema.mof|DSCResources\DSC_SqlDatabase\README.md|DSCResources\DSC_SqlServiceAccount\DSC_SqlServiceAccount.psm1|DSCResources\DSC_SqlDatabase\DSC_SqlDatabase.psm1|DSCResources\DSC_SqlServiceAccount\README.md|DSCResources\DSC_SqlTraceFlag\DSC_SqlTraceFlag.psm1|DSCResources\DSC_SqlEndpointPermission\DSC_SqlEndpointPermission.psm1|DSCResources\DSC_SqlTraceFlag\DSC_SqlTraceFlag.schema.mof|DSCResources\DSC_SqlEndpointPermission\README.md|DSCResources\DSC_SqlTraceFlag\README.md|DSCResources\DSC_SqlEndpointPermission\DSC_SqlEndpointPermission.schema.mof|DSCResources\DSC_SqlDatabaseUser\DSC_SqlDatabaseUser.psm1|DSCResources\DSC_SqlWindowsFirewall\DSC_SqlWindowsFirewall.schema.mof|DSCResources\DSC_SqlDatabaseUser\DSC_SqlDatabaseUser.schema.mof|DSCResources\DSC_SqlWindowsFirewall\DSC_SqlWindowsFirewall.psm1|DSCResources\DSC_SqlDatabaseUser\README.md|DSCResources\DSC_SqlWindowsFirewall\README.md|Modules\SqlServerDsc.Common\SqlServerDsc.Common.psd1|DSCResources\DSC_SqlRole\DSC_SqlRole.psm1|Modules\SqlServerDsc.Common\SqlServerDsc.Common.psm1|DSCResources\DSC_SqlRole\DSC_SqlRole.schema.mof|DSCResources\DSC_SqlProtocol\en-US\DSC_SqlProtocol.strings.psd1|DSCResources\DSC_SqlRole\README.md|DSCResources\DSC_SqlProtocol\en-US\about_SqlProtocol.help.txt|DSCResources\DSC_SqlDatabaseMail\DSC_SqlDatabaseMail.psm1|DSCResources\DSC_SqlWaitForAG\en-US\DSC_SqlWaitForAG.strings.psd1|DSCResources\DSC_SqlDatabaseMail\README.md|DSCResources\DSC_SqlWaitForAG\en-US\about_SqlWaitForAG.help.txt|DSCResources\DSC_SqlDatabaseMail\DSC_SqlDatabaseMail.schema.mof|DSCResources\DSC_SqlServiceAccount\en-US\DSC_SqlServiceAccount.strings.psd1|DSCResources\DSC_SqlDatabasePermission\DSC_SqlDatabasePermission.schema.mof|DSCResources\DSC_SqlServiceAccount\en-US\about_SqlServiceAccount.help.txt|DSCResources\DSC_SqlDatabasePermission\README.md|DSCResources\DSC_SqlEndpointPermission\en-US\about_SqlEndpointPermission.help.txt|DSCResources\DSC_SqlDatabasePermission\DSC_SqlDatabasePermission.psm1|DSCResources\DSC_SqlEndpointPermission\en-US\DSC_SqlEndpointPermission.strings.psd1|DSCResources\MSFT_SqlServerEndpointState\MSFT_SqlServerEndpointState.schema.mof|DSCResources\DSC_SqlWindowsFirewall\en-US\DSC_SqlWindowsFirewall.strings.psd1|DSCResources\MSFT_SqlServerEndpointState\MSFT_SqlServerEndpointState.psm1|DSCResources\DSC_SqlWindowsFirewall\en-US\about_SqlWindowsFirewall.help.txt|DSCResources\MSFT_SqlServerEndpointState\README.md|DSCResources\DSC_SqlRole\en-US\DSC_SqlRole.strings.psd1|DSCResources\DSC_SqlAG\DSC_SqlAG.schema.mof|DSCResources\DSC_SqlRole\en-US\about_SqlRole.help.txt|DSCResources\DSC_SqlAG\DSC_SqlAG.psm1|DSCResources\DSC_SqlDatabaseMail\en-US\DSC_SqlDatabaseMail.strings.psd1|DSCResources\DSC_SqlAG\README.md|DSCResources\DSC_SqlDatabaseMail\en-US\about_SqlDatabaseMail.help.txt|DSCResources\DSC_SqlReplication\DSC_SqlReplication.schema.mof|DSCResources\DSC_SqlDatabasePermission\en-US\DSC_SqlDatabasePermission.strings.psd1|DSCResources\DSC_SqlReplication\DSC_SqlReplication.psm1|DSCResources\DSC_SqlDatabasePermission\en-US\about_SqlDatabasePermission.help.txt|DSCResources\DSC_SqlReplication\README.md|DSCResources\MSFT_SqlServerEndpointState\en-US\about_SqlServerEndpointState.help.txt|DSCResources\DSC_SqlAGListener\DSC_SqlAGListener.psm1|DSCResources\MSFT_SqlServerEndpointState\en-US\MSFT_SqlServerEndpointState.strings.psd1|DSCResources\DSC_SqlAGListener\README.md|DSCResources\DSC_SqlAG\en-US\DSC_SqlAG.strings.psd1|DSCResources\DSC_SqlAGListener\DSC_SqlAGListener.schema.mof|DSCResources\DSC_SqlAG\en-US\about_SqlAG.help.txt|DSCResources\DSC_SqlAgentFailsafe\DSC_SqlAgentFailsafe.schema.mof|DSCResources\DSC_SqlReplication\en-US\about_SqlReplication.help.txt|DSCResources\DSC_SqlAgentFailsafe\DSC_SqlAgentFailsafe.psm1|DSCResources\DSC_SqlReplication\en-US\DSC_SqlReplication.strings.psd1|DSCResources\DSC_SqlAgentFailsafe\README.md|DSCResources\DSC_SqlAGListener\en-US\about_SqlAGListener.help.txt|DSCResources\DSC_SqlAlwaysOnService\DSC_SqlAlwaysOnService.psm1|DSCResources\DSC_SqlAGListener\en-US\DSC_SqlAGListener.strings.psd1|DSCResources\DSC_SqlAlwaysOnService\README.md|DSCResources\DSC_SqlAgentFailsafe\en-US\DSC_SqlAgentFailsafe.strings.psd1|DSCResources\DSC_SqlAlwaysOnService\DSC_SqlAlwaysOnService.schema.mof|DSCResources\DSC_SqlAgentFailsafe\en-US\about_SqlAgentFailsafe.help.txt|DSCResources\MSFT_SqlDatabaseRecoveryModel\MSFT_SqlDatabaseRecoveryModel.schema.mof|DSCResources\DSC_SqlAlwaysOnService\en-US\about_SqlAlwaysOnService.help.txt|DSCResources\MSFT_SqlDatabaseRecoveryModel\README.md|DSCResources\DSC_SqlAlwaysOnService\en-US\DSC_SqlAlwaysOnService.strings.psd1|DSCResources\MSFT_SqlDatabaseRecoveryModel\MSFT_SqlDatabaseRecoveryModel.psm1|DSCResources\MSFT_SqlDatabaseRecoveryModel\en-US\MSFT_SqlDatabaseRecoveryModel.strings.psd1|DSCResources\DSC_SqlPermission\DSC_SqlPermission.schema.mof|DSCResources\MSFT_SqlDatabaseRecoveryModel\en-US\about_SqlDatabaseRecoveryModel.help.txt|DSCResources\DSC_SqlPermission\README.md|DSCResources\DSC_SqlPermission\en-US\DSC_SqlPermission.strings.psd1|DSCResources\DSC_SqlPermission\DSC_SqlPermission.psm1|DSCResources\DSC_SqlPermission\en-US\about_SqlPermission.help.txt|DSCResources\DSC_SqlScriptQuery\DSC_SqlScriptQuery.psm1|DSCResources\DSC_SqlScriptQuery\en-US\about_SqlScriptQuery.help.txt|DSCResources\DSC_SqlScriptQuery\README.md|DSCResources\DSC_SqlScriptQuery\en-US\DSC_SqlScriptQuery.strings.psd1|DSCResources\DSC_SqlScriptQuery\DSC_SqlScriptQuery.schema.mof|DSCResources\DSC_SqlRS\en-US\about_SqlRS.help.txt|DSCResources\DSC_SqlRS\DSC_SqlRS.psm1|DSCResources\DSC_SqlRS\en-US\DSC_SqlRS.strings.psd1|DSCResources\DSC_SqlRS\DSC_SqlRS.schema.mof|DSCResources\DSC_SqlConfiguration\en-US\about_SqlConfiguration.help.txt|DSCResources\DSC_SqlRS\README.md|DSCResources\DSC_SqlConfiguration\en-US\DSC_SqlConfiguration.strings.psd1|DSCResources\DSC_SqlConfiguration\DSC_SqlConfiguration.psm1|DSCResources\DSC_SqlAGDatabase\en-US\DSC_SqlAGDatabase.strings.psd1|DSCResources\DSC_SqlConfiguration\DSC_SqlConfiguration.schema.mof|DSCResources\DSC_SqlAGDatabase\en-US\about_SqlAGDatabase.help.txt|DSCResources\DSC_SqlConfiguration\README.md|DSCResources\DSC_SqlScript\en-US\DSC_SqlScript.strings.psd1|DSCResources\DSC_SqlAGDatabase\DSC_SqlAGDatabase.schema.mof|DSCResources\DSC_SqlScript\en-US\about_SqlScript.help.txt|DSCResources\DSC_SqlAGDatabase\DSC_SqlAGDatabase.psm1|DSCResources\DSC_SqlRSSetup\en-US\DSC_SqlRSSetup.strings.psd1|DSCResources\DSC_SqlAGDatabase\README.md|DSCResources\DSC_SqlRSSetup\en-US\about_SqlRSSetup.help.txt|DSCResources\DSC_SqlScript\DSC_SqlScript.schema.mof|DSCResources\DSC_SqlAgentAlert\en-US\DSC_SqlAgentAlert.strings.psd1|DSCResources\DSC_SqlScript\DSC_SqlScript.psm1|DSCResources\DSC_SqlAgentAlert\en-US\about_SqlAgentAlert.help.txt|DSCResources\DSC_SqlScript\README.md|DSCResources\DSC_SqlDatabaseRole\en-US\DSC_SqlDatabaseRole.strings.psd1|DSCResources\DSC_SqlRSSetup\DSC_SqlRSSetup.schema.mof|DSCResources\DSC_SqlDatabaseRole\en-US\about_SqlDatabaseRole.help.txt|DSCResources\DSC_SqlRSSetup\DSC_SqlRSSetup.psm1|DSCResources\DSC_SqlEndpoint\en-US\DSC_SqlEndpoint.strings.psd1|DSCResources\DSC_SqlRSSetup\README.md|DSCResources\DSC_SqlEndpoint\en-US\about_SqlEndpoint.help.txt|DSCResources\DSC_SqlAgentAlert\DSC_SqlAgentAlert.psm1|DSCResources\DSC_SqlMemory\en-US\about_SqlMemory.help.txt|DSCResources\DSC_SqlAgentAlert\DSC_SqlAgentAlert.schema.mof|DSCResources\DSC_SqlMemory\en-US\DSC_SqlMemory.strings.psd1|DSCResources\DSC_SqlAgentAlert\README.md|DSCResources\DSC_SqlLogin\en-US\about_SqlLogin.help.txt|DSCResources\DSC_SqlDatabaseRole\DSC_SqlDatabaseRole.schema.mof|DSCResources\DSC_SqlLogin\en-US\DSC_SqlLogin.strings.psd1|DSCResources\DSC_SqlDatabaseRole\README.md|DSCResources\DSC_SqlDatabaseDefaultLocation\en-US\about_SqlDatabaseDefaultLocation.help.txt|DSCResources\DSC_SqlDatabaseRole\DSC_SqlDatabaseRole.psm1|DSCResources\DSC_SqlDatabaseDefaultLocation\en-US\DSC_SqlDatabaseDefaultLocation.strings.psd1|DSCResources\DSC_SqlEndpoint\README.md|DSCResources\DSC_SqlDatabaseObjectPermission\en-US\DSC_SqlDatabaseObjectPermission.strings.psd1|DSCResources\DSC_SqlEndpoint\DSC_SqlEndpoint.schema.mof|DSCResources\DSC_SqlDatabaseObjectPermission\en-US\about_SqlDatabaseObjectPermission.help.txt|DSCResources\DSC_SqlEndpoint\DSC_SqlEndpoint.psm1|DSCResources\DSC_SqlAGReplica\en-US\DSC_SqlAGReplica.strings.psd1|DSCResources\DSC_SqlMemory\DSC_SqlMemory.schema.mof|DSCResources\DSC_SqlAGReplica\en-US\about_SqlAGReplica.help.txt|DSCResources\DSC_SqlMemory\DSC_SqlMemory.psm1|DSCResources\DSC_SqlAlias\en-US\DSC_SqlAlias.strings.psd1|DSCResources\DSC_SqlMemory\README.md|DSCResources\DSC_SqlAlias\en-US\about_SqlAlias.help.txt|DSCResources\DSC_SqlLogin\DSC_SqlLogin.schema.mof|DSCResources\DSC_SqlSetup\sv-SE\DSC_SqlSetup.strings.psd1|DSCResources\DSC_SqlLogin\README.md|DSCResources\DSC_SqlSetup\en-US\about_SqlSetup.help.txt|DSCResources\DSC_SqlLogin\DSC_SqlLogin.psm1|DSCResources\DSC_SqlSetup\en-US\DSC_SqlSetup.strings.psd1|DSCResources\DSC_SqlDatabaseDefaultLocation\DSC_SqlDatabaseDefaultLocation.psm1|DSCResources\MSFT_SqlServerNetwork\en-US\about_SqlServerNetwork.help.txt|DSCResources\DSC_SqlDatabaseDefaultLocation\DSC_SqlDatabaseDefaultLocation.schema.mof|DSCResources\MSFT_SqlServerNetwork\en-US\MSFT_SqlServerNetwork.strings.psd1|DSCResources\DSC_SqlDatabaseDefaultLocation\README.md|DSCResources\DSC_SqlSecureConnection\en-US\DSC_SqlSecureConnection.strings.psd1|DSCResources\DSC_SqlDatabaseObjectPermission\DSC_SqlDatabaseObjectPermission.psm1|DSCResources\DSC_SqlSecureConnection\en-US\about_SqlSecureConnection.help.txt|DSCResources\DSC_SqlDatabaseObjectPermission\DSC_SqlDatabaseObjectPermission.schema.mof|DSCResources\DSC_SqlProtocolTcpIp\en-US\about_SqlProtocolTcpIp.help.txt|DSCResources\DSC_SqlDatabaseObjectPermission\README.md|DSCResources\DSC_SqlProtocolTcpIp\en-US\DSC_SqlProtocolTcpIp.strings.psd1|DSCResources\DSC_SqlAGReplica\DSC_SqlAGReplica.schema.mof|DSCResources\DSC_SqlMaxDop\en-US\DSC_SqlMaxDop.strings.psd1|DSCResources\DSC_SqlAGReplica\DSC_SqlAGReplica.psm1|DSCResources\DSC_SqlMaxDop\en-US\about_SqlMaxDop.help.txt|DSCResources\DSC_SqlAGReplica\README.md|DSCResources\DSC_SqlAgentOperator\en-US\about_SqlAgentOperator.help.txt|DSCResources\DSC_SqlAlias\DSC_SqlAlias.schema.mof|DSCResources\DSC_SqlAgentOperator\en-US\DSC_SqlAgentOperator.strings.psd1|DSCResources\DSC_SqlAlias\README.md|DSCResources\MSFT_SqlDatabaseOwner\en-US\about_SqlDatabaseOwner.help.txt|DSCResources\DSC_SqlAlias\DSC_SqlAlias.psm1|DSCResources\MSFT_SqlDatabaseOwner\en-US\MSFT_SqlDatabaseOwner.strings.psd1|DSCResources\DSC_SqlSetup\DSC_SqlSetup.psm1|DSCResources\DSC_SqlDatabase\en-US\about_SqlDatabase.help.txt|DSCResources\DSC_SqlSetup\DSC_SqlSetup.schema.mof|DSCResources\DSC_SqlDatabase\en-US\DSC_SqlDatabase.strings.psd1|DSCResources\DSC_SqlSetup\README.md|DSCResources\DSC_SqlTraceFlag\en-US\DSC_SqlTraceFlag.strings.psd1|DSCResources\MSFT_SqlServerNetwork\MSFT_SqlServerNetwork.psm1|DSCResources\DSC_SqlTraceFlag\en-US\about_SqlTraceFlag.help.txt|DSCResources\MSFT_SqlServerNetwork\README.md|DSCResources\DSC_SqlDatabaseUser\en-US\about_SqlDatabaseUser.help.txt|DSCResources\MSFT_SqlServerNetwork\MSFT_SqlServerNetwork.schema.mof|DSCResources\DSC_SqlDatabaseUser\en-US\DSC_SqlDatabaseUser.strings.psd1|DSCResources\DSC_SqlSecureConnection\DSC_SqlSecureConnection.schema.mof|Modules\SqlServerDsc.Common\sv-SE\SqlServerDsc.Common.strings.psd1|DSCResources\DSC_SqlSecureConnection\DSC_SqlSecureConnection.psm1|Modules\SqlServerDsc.Common\en-US\SqlServerDsc.Common.strings.psd1|DSCResources\DSC_SqlSecureConnection\README.md|Modules\DscResource.Common\0.10.3\DscResource.Common.psd1|DSCResources\DSC_SqlProtocolTcpIp\DSC_SqlProtocolTcpIp.schema.mof|Modules\DscResource.Common\0.10.3\DscResource.Common.psm1|DSCResources\DSC_SqlProtocolTcpIp\DSC_SqlProtocolTcpIp.psm1|Modules\DscResource.Common\0.10.3\en-US\DscResource.Common.strings.psd1|DSCResources\DSC_SqlProtocolTcpIp\README.md|Modules\DscResource.Common\0.10.3\en-US\about_DscResource.Common.help.txt|DSCResources\DSC_SqlMaxDop\DSC_SqlMaxDop.schema.mof</S>
+          <S N="GUID">693ee082-ed36-45a7-b490-88b07c86b42f</S>
+          <S N="PowerShellVersion">5.0</S>
+          <S N="CLRVersion">4.0</S>
+          <S N="CompanyName">DSC Community</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">D:\Repos\ADF\ADF\1-PrereqsToDeploy\DSCResources\SqlServerDsc\15.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

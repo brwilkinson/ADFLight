@@ -1,0 +1,10 @@
+
+[ClassVersion("1.0.0.0"), FriendlyName("cAppxPackage")]
+class cAppxPackage : OMI_BaseResource
+{
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+    [Key] String Name;
+    [Write] String PackagePath;
+    [Write] String DependencyPath[];
+    [Write] Boolean Register;
+};

@@ -1,0 +1,132 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">xFailOverCluster</S>
+      <S N="Version">1.16.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Module containing DSC resources for deployment and configuration of Windows Server Failover Cluster.</S>
+      <S N="Author">DSC Community</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PowerShellTeam</S>
+          <S>gaelcolas</S>
+          <S>dsccommunity</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">Copyright the DSC Community contributors. All rights reserved.</S>
+      <DT N="PublishedDate">2021-03-17T20:26:24-07:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/dsccommunity/xFailOverCluster/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/dsccommunity/xFailOverCluster</URI>
+      <URI N="IconUri">https://dsccommunity.org/images/DSC_Logo_300p.png</URI>
+      <Obj N="Tags" RefId="2">
+        <TNRef RefId="1" />
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResourceKit</S>
+          <S>DSCResource</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>xCluster</S>
+                <S>xClusterDisk</S>
+                <S>xClusterNetwork</S>
+                <S>xClusterPreferredOwner</S>
+                <S>xClusterProperty</S>
+                <S>xClusterQuorum</S>
+                <S>xWaitForCluster</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">## [1.16.0] - 2021-03-17_x000A__x000D__x000A_### Added_x000D__x000A__x000D__x000A_- xClusterProperty_x000D__x000A_  - Added the BlockCacheSize parameter which controls Cluster Shared Volume_x000D__x000A_    memory caching in MB ([issue #252](https://github.com/dsccommunity/xFailOverCluster/issues/252))._x000D__x000A__x000D__x000A_### Changed_x000D__x000A__x000D__x000A_- xFailOverCluster_x000D__x000A_  - Update pipeline to use new deploy tasks.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Copyright the DSC Community contributors. All rights reserved.</S>
+          <S N="description">Module containing DSC resources for deployment and configuration of Windows Server Failover Cluster.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">## [1.16.0] - 2021-03-17_x000A__x000D__x000A_### Added_x000D__x000A__x000D__x000A_- xClusterProperty_x000D__x000A_  - Added the BlockCacheSize parameter which controls Cluster Shared Volume_x000D__x000A_    memory caching in MB ([issue #252](https://github.com/dsccommunity/xFailOverCluster/issues/252))._x000D__x000A__x000D__x000A_### Changed_x000D__x000A__x000D__x000A_- xFailOverCluster_x000D__x000A_  - Update pipeline to use new deploy tasks.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">185418</S>
+          <S N="downloadCount">425194</S>
+          <S N="packageSize">33499</S>
+          <S N="published">3/17/2021 8:26:24 PM -07:00</S>
+          <S N="created">3/17/2021 8:26:24 PM -07:00</S>
+          <S N="lastUpdated">11/15/2021 4:01:55 AM -08:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResourceKit DSCResource PSModule PSDscResource_x005F_xCluster PSDscResource_x005F_xClusterDisk PSDscResource_x005F_xClusterNetwork PSDscResource_x005F_xClusterPreferredOwner PSDscResource_x005F_xClusterProperty PSDscResource_x005F_xClusterQuorum PSDscResource_x005F_xWaitForCluster PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-11-15T04:01:55Z</S>
+          <S N="NormalizedVersion">1.16.0</S>
+          <S N="Authors">DSC Community</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">xFailOverCluster.nuspec|xFailOverCluster.psd1|en-US\about_x005F_xFailOverCluster.help.txt|DSCResources\MSFT_x005F_xClusterPreferredOwner\MSFT_x005F_xClusterPreferredOwner.schema.mof|DSCResources\MSFT_x005F_xClusterPreferredOwner\MSFT_x005F_xClusterPreferredOwner.psm1|DSCResources\MSFT_x005F_xClusterNetwork\MSFT_x005F_xClusterNetwork.schema.mof|DSCResources\MSFT_x005F_xClusterNetwork\MSFT_x005F_xClusterNetwork.psm1|DSCResources\MSFT_x005F_xClusterQuorum\MSFT_x005F_xClusterQuorum.schema.mof|DSCResources\MSFT_x005F_xClusterQuorum\MSFT_x005F_xClusterQuorum.psm1|DSCResources\MSFT_x005F_xClusterProperty\MSFT_x005F_xClusterProperty.schema.mof|DSCResources\MSFT_x005F_xClusterProperty\MSFT_x005F_xClusterProperty.psm1|DSCResources\MSFT_x005F_xCluster\MSFT_x005F_xCluster.schema.mof|DSCResources\MSFT_x005F_xCluster\MSFT_x005F_xCluster.psm1|DSCResources\MSFT_x005F_xWaitForCluster\MSFT_x005F_xWaitForCluster.schema.mof|DSCResources\MSFT_x005F_xWaitForCluster\MSFT_x005F_xWaitForCluster.psm1|DSCResources\MSFT_x005F_xClusterDisk\MSFT_x005F_xClusterDisk.psm1|DSCResources\MSFT_x005F_xClusterDisk\MSFT_x005F_xClusterDisk.schema.mof|Modules\DscResource.Common\0.2.0\DscResource.Common.psd1|Modules\DscResource.Common\0.2.0\DscResource.Common.psm1|DSCResources\MSFT_x005F_xClusterPreferredOwner\en-US\MSFT_x005F_xClusterPreferredOwner.strings.psd1|DSCResources\MSFT_x005F_xClusterNetwork\en-US\MSFT_x005F_xClusterNetwork.strings.psd1|DSCResources\MSFT_x005F_xClusterQuorum\en-US\MSFT_x005F_xClusterQuorum.strings.psd1|DSCResources\MSFT_x005F_xClusterProperty\en-US\MSFT_x005F_xClusterProperty.strings.psd1|DSCResources\MSFT_x005F_xCluster\en-US\MSFT_x005F_xCluster.strings.psd1|DSCResources\MSFT_x005F_xWaitForCluster\en-US\MSFT_x005F_xWaitForCluster.strings.psd1|DSCResources\MSFT_x005F_xClusterDisk\en-US\MSFT_x005F_xClusterDisk.strings.psd1|Modules\DscResource.Common\0.2.0\en-US\DscResource.Common.psd1|Modules\DscResource.Common\0.2.0\en-US\about_DscResource.Common.help.txt</S>
+          <S N="GUID">026e7fd8-06dd-41bc-b373-59366ab18679</S>
+          <S N="PowerShellVersion">4.0</S>
+          <S N="CompanyName">DSC Community</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">D:\Repos\ADF\ADF\1-PrereqsToDeploy\DSCResources\xFailOverCluster\1.16.0</S>
+    </MS>
+  </Obj>
+</Objs>

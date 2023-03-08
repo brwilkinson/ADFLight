@@ -1,0 +1,133 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PolicyFileEditor</S>
+      <S N="Version">3.0.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Commands and DSC resource for modifying Administrative Templates settings in local GPO registry.pol files.</S>
+      <S N="Author">Dave Wyatt</S>
+      <S N="CompanyName">dlwyatt</S>
+      <S N="Copyright">(c) 2015 Dave Wyatt. All rights reserved.</S>
+      <DT N="PublishedDate">2018-02-12T21:22:59-08:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://www.apache.org/licenses/LICENSE-2.0.html</URI>
+      <URI N="ProjectUri">https://github.com/dlwyatt/PolicyFileEditor</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>cAccountAdministrativeTemplateSetting</S>
+                <S>cAdministrativeTemplateSetting</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Set-PolicyFileEntry</S>
+                <S>Remove-PolicyFileEntry</S>
+                <S>Get-PolicyFileEntry</S>
+                <S>Update-GptIniVersion</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Set-PolicyFileEntry</S>
+                <S>Remove-PolicyFileEntry</S>
+                <S>Get-PolicyFileEntry</S>
+                <S>Update-GptIniVersion</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">Updated resource schemas to be more friendly with Invoke-DscResource.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2015 Dave Wyatt. All rights reserved.</S>
+          <S N="description">Commands and DSC resource for modifying Administrative Templates settings in local GPO registry.pol files.</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">Updated resource schemas to be more friendly with Invoke-DscResource.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1489757</S>
+          <S N="downloadCount">1579491</S>
+          <S N="packageSize">72935</S>
+          <S N="published">2/12/2018 9:22:59 PM -08:00</S>
+          <S N="created">2/12/2018 9:22:59 PM -08:00</S>
+          <S N="lastUpdated">11/15/2021 3:56:54 AM -08:00</S>
+          <S N="tags">PSModule PSFunction_Set-PolicyFileEntry PSCommand_Set-PolicyFileEntry PSFunction_Remove-PolicyFileEntry PSCommand_Remove-PolicyFileEntry PSFunction_Get-PolicyFileEntry PSCommand_Get-PolicyFileEntry PSFunction_Update-GptIniVersion PSCommand_Update-GptIniVersion PSIncludes_Function PSDscResource_cAccountAdministrativeTemplateSetting PSDscResource_cAdministrativeTemplateSetting PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-11-15T03:56:54Z</S>
+          <S N="NormalizedVersion">3.0.1</S>
+          <S N="Authors">Dave Wyatt</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PolicyFileEditor.nuspec|Commands.ps1|Common.ps1|LICENSE|PolFileEditor.dll|PolicyFileEditor.psd1|PolicyFileEditor.psm1|DscResources\PshOrg_AccountAdminTemplateSetting\PshOrg_AccountAdminTemplateSetting.psm1|DscResources\PshOrg_AccountAdminTemplateSetting\PshOrg_AccountAdminTemplateSetting.schema.mof|DscResources\PshOrg_AdminTemplateSetting\PshOrg_AdminTemplateSetting.psm1|DscResources\PshOrg_AdminTemplateSetting\PshOrg_AdminTemplateSetting.schema.mof|en-US\about_RegistryValuesForAdminTemplates.Help.txt</S>
+          <S N="GUID">110a2398-3053-4ffc-89d1-1b6a38a2dc86</S>
+          <S N="PowerShellVersion">2.0</S>
+          <S N="DotNetFrameworkVersion">2.0</S>
+          <S N="CompanyName">Home</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">D:\Repos\ADF\ADF\1-PrereqsToDeploy\DSCResources\PolicyFileEditor\3.0.1</S>
+    </MS>
+  </Obj>
+</Objs>

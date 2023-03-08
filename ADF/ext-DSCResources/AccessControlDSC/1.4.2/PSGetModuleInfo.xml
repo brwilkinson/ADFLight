@@ -1,0 +1,133 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">AccessControlDSC</S>
+      <S N="Version">1.4.2</S>
+      <S N="Type">Module</S>
+      <S N="Description">Module with DSC resource to manage Registry and NTFS access entries and manage Active Directory SACL</S>
+      <S N="Author">Microsoft Corporation</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>macoller</S>
+          <S>devopsjesus</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">(c) 2017 Microsoft. All rights reserved.</S>
+      <DT N="PublishedDate">2021-10-07T21:06:38-07:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/mcollera/AccessControlDsc/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/mcollera/AccessControlDsc</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TNRef RefId="1" />
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResourceKit</S>
+          <S>DSCResource</S>
+          <S>AccessControlDsc</S>
+          <S>DACL</S>
+          <S>SACL</S>
+          <S>Permissions</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>AccessControlResourceHelper</S>
+                <S>ActiveDirectoryAccessEntry</S>
+                <S>ActiveDirectoryAuditRuleEntry</S>
+                <S>FileSystemAuditRuleEntry</S>
+                <S>NTFSAccessEntry</S>
+                <S>RegistryAccessEntry</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2017 Microsoft. All rights reserved.</S>
+          <S N="description">Module with DSC resource to manage Registry and NTFS access entries and manage Active Directory SACL</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">4171</S>
+          <S N="downloadCount">261402</S>
+          <S N="packageSize">61104</S>
+          <S N="published">10/7/2021 9:06:38 PM -07:00</S>
+          <S N="created">10/7/2021 9:06:38 PM -07:00</S>
+          <S N="lastUpdated">11/15/2021 3:56:54 AM -08:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResourceKit DSCResource AccessControlDsc DACL SACL Permissions PSModule PSDscResource_AccessControlResourceHelper PSDscResource_ActiveDirectoryAccessEntry PSDscResource_ActiveDirectoryAuditRuleEntry PSDscResource_FileSystemAuditRuleEntry PSDscResource_NTFSAccessEntry PSDscResource_RegistryAccessEntry PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2021-11-15T03:56:54Z</S>
+          <S N="NormalizedVersion">1.4.2</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">AccessControlDsc.nuspec|.codecov.yml|LICENSE|DscResources\AccessControlResourceHelper\en-US\AccessControlResourceHelper.strings.psd1|DscResources\FileSystemAuditRuleEntry\FileSystemAuditRuleEntry.psm1|DscResources\RegistryAccessEntry\RegistryAccessEntry.schema.mof|Examples\NtfsAccessEntry_example.ps1|Tests\Integration\NTFSAccessEntry.Config.ps1|Tests\Unit\ActiveDirectoryAuditRuleEntry.Tests.ps1|README.md|DscResources\ActiveDirectoryAccessEntry\ActiveDirectoryAccessEntry.psm1|DscResources\FileSystemAuditRuleEntry\FileSystemAuditRuleEntry.schema.mof|DscResources\RegistryAccessEntry\en-US\RegistryAccessEntry.strings.psd1|Examples\RegistryAccessEntry_example.ps1|Tests\Integration\NTFSAccessEntry.Integration.Tests.ps1|Tests\Unit\FileSystemAuditRuleEntry.Tests.ps1|bin\AccessControlDSC.HelperFunctions.psm1|DscResources\ActiveDirectoryAccessEntry\ActiveDirectoryAccessEntry.schema.mof|DscResources\NTFSAccessEntry\NTFSAccessEntry.psm1|Examples\ActiveDirectoryAccessEntry_example.ps1|Tests\TestHelper.psm1|Tests\Integration\RegistryAccessEntry.Config.ps1|Tests\Unit\NTFSAccessEntry.Tests.ps1|AccessControlDsc.psd1|DscResources\AccessControlResourceHelper\AccessControlResourceHelper.psd1|DscResources\ActiveDirectoryAuditRuleEntry\ActiveDirectoryAuditRuleEntry.psm1|DscResources\NTFSAccessEntry\NTFSAccessEntry.schema.mof|Examples\ActiveDirectoryAuditRuleEntry_example.ps1|Tests\Integration\FileSystemAuditRuleEntry.Config.ps1|Tests\Integration\RegistryAccessEntry.Integration.Tests.ps1|Tests\Unit\RegistryAccessEntry.Tests.ps1|appveyor.yml|DscResources\AccessControlResourceHelper\AccessControlResourceHelper.psm1|DscResources\ActiveDirectoryAuditRuleEntry\ActiveDirectoryAuditRuleEntry.schema.mof|DscResources\RegistryAccessEntry\RegistryAccessEntry.psm1|Examples\FileSystemAuditRuleEntry_example.ps1|Tests\Integration\FileSystemAuditRuleEntry.Integration.Tests.ps1|Tests\Unit\ActiveDirectoryAccessEntry.Tests.ps1</S>
+          <S N="GUID">a544c26f-3f96-4c1e-8351-1604867aafc5</S>
+          <S N="PowerShellVersion">4.0</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">D:\Repos\ADF\ADF\1-PrereqsToDeploy\DSCResources\AccessControlDSC\1.4.2</S>
+    </MS>
+  </Obj>
+</Objs>

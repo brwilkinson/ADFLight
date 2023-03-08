@@ -1,0 +1,146 @@
+.NAME
+    xDnsRecord
+
+.DESCRIPTION
+    The xDnsRecord DSC resource manages IPv4 host (A), CName, or PTR DNS records against a specific zone on a Domian Name System (DNS) server.
+
+.PARAMETER Name
+    Key - String
+    Specifies the name of the DNS server resource record object.
+
+.PARAMETER Zone
+    Key - String
+    Specifies the name of a DNS zone.
+
+.PARAMETER Type
+    Required - String
+    Allowed values: ARecord, CName, Ptr
+    Specifies the type of DNS record.
+
+.PARAMETER Target
+    Key - String
+    Specifies the Target Hostname or IP Address. Only Supports IPv4 in the current release.
+
+.PARAMETER DnsServer
+    Write - String
+    Name of the DnsServer to create the record on. Defaults to 'localhost'.
+
+.PARAMETER Ensure
+    Write - String
+    Allowed values: Present, Absent
+    Should this DNS resource record be present or absent
+
+.EXAMPLE 1
+
+This configuration will manage a DNS A record
+
+Configuration xDnsRecord_ARecord_config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsRecord 'TestRecord'
+        {
+            Name   = 'testArecord'
+            Target = '192.168.0.123'
+            Zone   = 'contoso.com'
+            Type   = 'ARecord'
+            Ensure = 'Present'
+        }
+    }
+}
+
+.EXAMPLE 2
+
+This configuration will manage a pair of round-robin DNS A records
+
+Configuration xDnsRecord_RoundRobin_config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsRecord 'TestRecord1'
+        {
+            Name   = 'testArecord'
+            Target = '192.168.0.123'
+            Zone   = 'contoso.com'
+            Type   = 'ARecord'
+            Ensure = 'Present'
+        }
+
+        xDnsRecord 'TestRecord2'
+        {
+            Name   = 'testArecord'
+            Target = '192.168.0.124'
+            Zone   = 'contoso.com'
+            Type   = 'ARecord'
+            Ensure = 'Present'
+        }
+    }
+}
+
+.EXAMPLE 3
+
+This configuration will manage a DNS CName record
+
+Configuration xDnsRecord_CName_config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsRecord 'TestCNameRecord'
+        {
+            Name   = 'testCName'
+            Target = 'test.contoso.com'
+            Zone   = 'contoso.com'
+            Type   = 'CName'
+            Ensure = 'Present'
+        }
+    }
+}
+
+.EXAMPLE 4
+
+This configuration will manage a DNS PTR record
+
+Configuration xDnsRecord_PTR_config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsRecord 'TestPtrRecord'
+        {
+            Name   = '123'
+            Target = 'TestA.contoso.com'
+            Zone   = '0.168.192.in-addr.arpa'
+            Type   = 'PTR'
+            Ensure = 'Present'
+        }
+    }
+}
+
+.EXAMPLE 5
+
+This configuration will remove a DNS A record
+
+Configuration xDnsRecord_ARecordRemove_config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsRecord 'RemoveTestRecord'
+        {
+            Name   = 'testArecord'
+            Target = '192.168.0.123'
+            Zone   = 'contoso.com'
+            Type   = 'ARecord'
+            Ensure = 'Absent'
+        }
+    }
+}
+

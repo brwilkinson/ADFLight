@@ -1,0 +1,3 @@
+LIBRARY=MSFT_nxIPAddressResource
+HOSTING=@requestor@
+CLASS=MSFT_nxIPAddressResource:OMI_BaseResource

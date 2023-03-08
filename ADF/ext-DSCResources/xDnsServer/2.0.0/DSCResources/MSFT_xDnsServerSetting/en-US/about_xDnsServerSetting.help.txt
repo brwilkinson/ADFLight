@@ -1,0 +1,241 @@
+.NAME
+    xDnsServerSetting
+
+.DESCRIPTION
+    The xDnsServerSetting DSC resource manages the Domain Name System (DNS) server
+    settings and properties.
+
+    If the parameter DnsServer is set to 'localhost' then the resource
+    can normally use the default credentials (SYSTEM) to configure the DNS server
+    settings. If using any other value for the parameter DnsServer make sure
+    that the credential the resource is run as have the correct permissions
+    at the target node and the necessary network traffic is permitted (WsMan
+    protocol). It is possible to run the resource with specific credentials using the
+    built-in parameter PsDscRunAsCredential.
+
+.PARAMETER DnsServer
+    Key - String
+    Specifies the DNS server to connect to, or use 'localhost' for the current node.
+
+.PARAMETER AddressAnswerLimit
+    Write - UInt32
+    Maximum number of host records returned in response to an address request. Values between 5 and 28 are valid.
+
+.PARAMETER AllowUpdate
+    Write - UInt32
+    Specifies whether the DNS Server accepts dynamic update requests.
+
+.PARAMETER AutoCacheUpdate
+    Write - Boolean
+    Indicates whether the DNS Server attempts to update its cache entries using data from root servers.
+
+.PARAMETER AutoConfigFileZones
+    Write - UInt32
+    Indicates which standard primary zones that are authoritative for the name of the DNS Server must be updated when the name server changes.
+
+.PARAMETER BindSecondaries
+    Write - Boolean
+    Determines the AXFR message format when sending to non-Microsoft DNS Server secondaries.
+
+.PARAMETER BootMethod
+    Write - UInt32
+    Initialization method for the DNS Server.
+
+.PARAMETER DefaultAgingState
+    Write - Boolean
+    Default ScavengingInterval value set for all Active Directory-integrated zones created on this DNS Server.
+
+.PARAMETER DefaultNoRefreshInterval
+    Write - UInt32
+    No-refresh interval, in hours, set for all Active Directory-integrated zones created on this DNS Server.
+
+.PARAMETER DefaultRefreshInterval
+    Write - UInt32
+    Refresh interval, in hours, set for all Active Directory-integrated zones created on this DNS Server.
+
+.PARAMETER DisableAutoReverseZones
+    Write - Boolean
+    Indicates whether the DNS Server automatically creates standard reverse look up zones.
+
+.PARAMETER DisjointNets
+    Write - Boolean
+    Indicates whether the default port binding for a socket used to send queries to remote DNS Servers can be overridden.
+
+.PARAMETER DsPollingInterval
+    Write - UInt32
+    Interval, in seconds, to poll the DS-integrated zones.
+
+.PARAMETER DsTombstoneInterval
+    Write - UInt32
+    Lifetime of tombstoned records in Directory Service integrated zones, expressed in seconds.
+
+.PARAMETER EDnsCacheTimeout
+    Write - UInt32
+    Lifetime, in seconds, of the cached information describing the EDNS version supported by other DNS Servers.
+
+.PARAMETER EnableDirectoryPartitions
+    Write - Boolean
+    Specifies whether support for application directory partitions is enabled on the DNS Server.
+
+.PARAMETER EnableDnsSec
+    Write - UInt32
+    Specifies whether the DNS Server includes DNSSEC-specific RRs, KEY, SIG, and NXT in a response.
+
+.PARAMETER EnableEDnsProbes
+    Write - Boolean
+    Specifies the behavior of the DNS Server. When TRUE, the DNS Server always responds with OPT resource records according to RFC 2671, unless the remote server has indicated it does not support EDNS in a prior exchange. If FALSE, the DNS Server responds to queries with OPTs only if OPTs are sent in the original query.
+
+.PARAMETER ForwardDelegations
+    Write - UInt32
+    Specifies whether queries to delegated sub-zones are forwarded.
+
+.PARAMETER Forwarders
+    Write - StringArray
+    Enumerates the list of IP addresses of Forwarders to which the DNS Server forwards queries.
+
+.PARAMETER ForwardingTimeout
+    Write - UInt32
+    Time, in seconds, a DNS Server forwarding a query will wait for resolution from the forwarder before attempting to resolve the query itself.
+
+.PARAMETER IsSlave
+    Write - Boolean
+    TRUE if the DNS server does not use recursion when name-resolution through forwarders fails.
+
+.PARAMETER ListenAddresses
+    Write - StringArray
+    Enumerates the list of IP addresses on which the DNS Server can receive queries.
+
+.PARAMETER LocalNetPriority
+    Write - Boolean
+    Indicates whether the DNS Server gives priority to the local net address when returning A records.
+
+.PARAMETER LogLevel
+    Write - UInt32
+    Indicates which policies are activated in the Event Viewer system log.
+
+.PARAMETER LooseWildcarding
+    Write - Boolean
+    Indicates whether the DNS Server performs loose wildcarding.
+
+.PARAMETER MaxCacheTTL
+    Write - UInt32
+    Maximum time, in seconds, the record of a recursive name query may remain in the DNS Server cache.
+
+.PARAMETER MaxNegativeCacheTTL
+    Write - UInt32
+    Maximum time, in seconds, a name error result from a recursive query may remain in the DNS Server cache.
+
+.PARAMETER NameCheckFlag
+    Write - UInt32
+    Indicates the set of eligible characters to be used in DNS names.
+
+.PARAMETER NoRecursion
+    Write - Boolean
+    Indicates whether the DNS Server performs recursive look ups. TRUE indicates recursive look ups are not performed.
+
+.PARAMETER RecursionRetry
+    Write - UInt32
+    Elapsed seconds before retrying a recursive look up.
+
+.PARAMETER RecursionTimeout
+    Write - UInt32
+    Elapsed seconds before the DNS Server gives up recursive query.
+
+.PARAMETER RoundRobin
+    Write - Boolean
+    Indicates whether the DNS Server round robins multiple A records.
+
+.PARAMETER RpcProtocol
+    Write - SInt16
+    RPC protocol or protocols over which administrative RPC runs.
+
+.PARAMETER ScavengingInterval
+    Write - UInt32
+    Interval, in hours, between two consecutive scavenging operations performed by the DNS Server.
+
+.PARAMETER SecureResponses
+    Write - Boolean
+    Indicates whether the DNS Server exclusively saves records of names in the same subtree as the server that provided them.
+
+.PARAMETER SendPort
+    Write - UInt32
+    Port on which the DNS Server sends UDP queries to other servers.
+
+.PARAMETER StrictFileParsing
+    Write - Boolean
+    Indicates whether the DNS Server parses zone files strictly.
+
+.PARAMETER UpdateOptions
+    Write - UInt32
+    Restricts the type of records that can be dynamically updated on the server, used in addition to the AllowUpdate settings on Server and Zone objects.
+
+.PARAMETER WriteAuthorityNS
+    Write - Boolean
+    Specifies whether the DNS Server writes NS and SOA records to the authority section on successful response.
+
+.PARAMETER XfrConnectTimeout
+    Write - UInt32
+    Time, in seconds, the DNS Server waits for a successful TCP connection to a remote server when attempting a zone transfer.
+
+.PARAMETER DsAvailable
+    Read - Boolean
+    Indicates whether there is an available DS on the DNS Server.
+
+.EXAMPLE 1
+
+This configuration will manage the DNS server settings on the current
+node.
+
+Configuration xDnsServerSetting_CurrentNode_Config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsServerSetting 'DnsServerProperties'
+        {
+            DnsServer           = 'localhost'
+            ListenAddresses    = '10.0.0.4'
+            IsSlave            = $true
+            Forwarders         = @('168.63.129.16', '168.63.129.18')
+            RoundRobin         = $true
+            LocalNetPriority   = $true
+            SecureResponses    = $true
+            NoRecursion        = $false
+            BindSecondaries    = $false
+            StrictFileParsing  = $false
+            ScavengingInterval = 168
+            LogLevel           = 50393905
+        }
+    }
+}
+
+.EXAMPLE 2
+
+This configuration will manage the DNS server settings on the current
+node.
+
+Configuration xDnsServerSetting_RemoteNode_Config
+{
+    Import-DscResource -ModuleName 'xDnsServer'
+
+    Node localhost
+    {
+        xDnsServerSetting 'DnsServerProperties'
+        {
+            DnsServer           = 'dns1.company.local'
+            ListenAddresses    = '10.0.0.4'
+            IsSlave            = $true
+            Forwarders         = @('168.63.129.16', '168.63.129.18')
+            RoundRobin         = $true
+            LocalNetPriority   = $true
+            SecureResponses    = $true
+            NoRecursion        = $false
+            BindSecondaries    = $false
+            StrictFileParsing  = $false
+            ScavengingInterval = 168
+            LogLevel           = 50393905
+        }
+    }
+}
+

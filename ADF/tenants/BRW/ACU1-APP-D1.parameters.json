@@ -1,0 +1,346 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "Environment": {
+      "value": "D"
+    },
+    "DeploymentID": {
+      "value": "1"
+    },
+    "vmAdminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/b8f402aa-20f7-4888-b45c-3cf086dad9c3/resourceGroups/ACU1-BRW-APP-RG-D1/providers/Microsoft.KeyVault/vaults/acu1-brw-app-d1-kvglobal"
+        },
+        "secretName": "localadmin"
+      }
+    },
+    "Stage": {
+      "value": {
+        "SUB": 1,
+        "RG": 1,
+        "RBAC": 1,
+        "UAI": 1,
+        "SP": 0,
+        "KV": 1,
+        "OMS": 1,
+        "OMSSolutions": 1,
+        "OMSDataSources": 1,
+        "OMSUpdateWeekly": 0,
+        "OMSUpdateMonthly": 0,
+        "OMSUpates": 1,
+        "SA": 1,
+        "CDN": 0,
+        "StorageSync": 0,
+        "RSV": 1,
+        "NSG": 1,
+        "NetworkWatcher": 0,
+        "FlowLogs": 0,
+        "VNet": 1,
+        "VNetPeering": 0,
+        "DNSPublicZone": 0,
+        "DNSPrivateZone": 0,
+        "LinkPrivateDns": 0,
+        "PrivateLink": 1,
+        "BastionHost": 1,
+        "RT": 0,
+        "FW": 0,
+        "VNGW": 0,
+        "NATGW": 0,
+        "ERGW": 0,
+        "ADPrimary": 0,
+        "ADSecondary": 0,
+        "LB": 0,
+        "InitialDOP": 0,
+        "VMApp": 0,
+        "VMAppLinux": 0,
+        "VMSQL": 0,
+        "VMFILE": 0,
+        "VMSS": 0,
+        "WAFPOLICY": 0,
+        "FRONTDOOR": 0,
+        "WAF": 0,
+        "SetExternalDNS": 0,
+        "SetInternalDNS": 0,
+        "APPCONFIG": 0,
+        "REDIS": 0,
+        "APIM": 0,
+        "ACR": 0,
+        "ACI": 0,
+        "AKS": 0,
+        "SQLMI": 0,
+        "CosmosDB": 0,
+        "DASHBOARD": 0,
+        "DNSLookup": 0,
+        "ServerFarm": 0,
+        "WebSite": 0,
+        "WebSiteContainer": 0,
+        "MySQLDB": 0,
+        "Function": 0,
+        "SB": 0,
+        "AzureSQL": 0
+      }
+    },
+    "Extensions": {
+      "value": {
+        "MonitoringAgent": 1,
+        "IaaSDiagnostics": 1,
+        "DependencyAgent": 1,
+        "AzureMonitorAgent": 1,
+        "GuestHealthAgent": 1,
+        "VMInsights": 1,
+        "AdminCenter": 1,
+        "BackupWindowsWorkloadSQL": 0,
+        "DSC": 1,
+        "Scripts": 1,
+        "MSI": 1,
+        "CertMgmt": 0,
+        "DomainJoin": 1,
+        "AADLogin": 0,
+        "WindowsOpenSSH": 0,
+        "Antimalware": 1,
+        "VMSSAzureADEnabled": 0,
+        "SqlIaasExtension": 0
+      }
+    },
+    "DeploymentInfo": {
+      "value": {
+        "CertificateThumbprint": "C5E38D3B99008358257148DA8E452B1239E37F90",
+        "certificateUrl": "https://acu1-brw-app-d1-kvglobal.vault.azure.net:443/secrets/WildcardCert/52d3cb6b744a4705ac5c9ca82ba9e067",
+        "uaiInfo": [
+          {
+            "name": "StorageAccountFileContributor",
+            "RBAC": [
+              {
+                "Name": "Storage File Data SMB Share Contributor"
+              },
+              {
+                "Name": "Storage Blob Data Contributor"
+              }
+            ]
+          },
+          {
+            "name": "KeyVaultSecretsGet",
+            "RBAC": [
+              {
+                "Name": "Key Vault Secrets User"
+              }
+            ]
+          }
+        ],
+        "DNSServers": [],
+        "SubnetInfo": [
+          {
+            "name": "snMT01",
+            "prefix": "0/27",
+            "NSG": 1,
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1,
+            "delegations": "Microsoft.Web/serverfarms"
+          },
+          {
+            "name": "snFE01",
+            "prefix": "32/27",
+            "NSG": 1,
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1
+          },
+          {
+            "name": "snBE02",
+            "prefix": "64/28",
+            "NSG": 1,
+            "Route": 0, //1
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1,
+            "delegations": "Microsoft.ContainerInstance/containerGroups"
+          },
+          {
+            "name": "snBE01", // APIM Dedicated
+            "prefix": "80/28",
+            "NSG": 1,
+            "Route": 0, //1
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1
+          },
+          {
+            "name": "AzureBastionSubnet",
+            "prefix": "96/27",
+            "NSG": 1,
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1
+          },
+          {
+            "name": "snWAF01",
+            "prefix": "128/25",
+            "NSG": 1,
+            "Route": 0,
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1
+          },
+          {
+            "name": "snMT02",
+            "prefix": "0/24",
+            "NSG": 1,
+            "Route": 0, //1
+            "FlowLogEnabled": 1,
+            "FlowAnalyticsEnabled": 1
+          }
+        ],
+        "BastionInfo": {
+          "name": "HST01",
+          "PublicIP": "Static",
+          "SKU": "Standard"
+        },
+        "storageAccountInfo": [
+          {
+            "namesuffix": "diag",
+            "skuName": "Standard_LRS",
+            "allNetworks": "Allow",
+            "logging": {
+              "r": 0,
+              "w": 0,
+              "d": 1
+            },
+            "blobVersioning": 1,
+            "changeFeed": 1,
+            "softDeletePolicy": {
+              "enabled": 1,
+              "days": 7
+            }
+          },
+          {
+            "namesuffix": "global",
+            "skuName": "Standard_LRS",
+            "allNetworks": "Allow",
+            "logging": {
+              "r": 0,
+              "w": 0,
+              "d": 1
+            },
+            "blobVersioning": 1,
+            "changeFeed": 1,
+            "softDeletePolicy": {
+              "enabled": 1,
+              "days": 7
+            },
+            "containers": [
+              {
+                "name": "builds"
+              }
+            ]
+          }
+        ],
+        "KVInfo": [
+          {
+            "Name": "App01",
+            "skuName": "standard",
+            "softDelete": true,
+            "PurgeProtection": true,
+            "RbacAuthorization": true,
+            "UserAssignedIdentity": {
+              "name": "KeyVaultSecretsGetApp",
+              "permission": "SecretsGetAndList"
+            },
+            "allNetworks": "Allow",
+            "PrivateLinkInfo": [
+              {
+                "Subnet": "snFE01",
+                "groupID": "vault"
+              }
+            ],
+            "_rolesInfo": [
+              {
+                "Name": "BW",
+                "RBAC": [
+                  {
+                    "Name": "Key Vault Administrator"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "appServiceplanInfo": [
+          {
+            "Name": "ASP01",
+            "kind": "elastic",
+            "perSiteScaling": false,
+            "reserved": false,
+            "skuname": "EP1",
+            "skutier": "ElasticPremium",
+            "skucapacity": 1,
+            "maxWorkerCount": 100,
+            "deploy": 1
+          },
+          {
+            "Name": "WPS01",
+            "kind": "app",
+            "perSiteScaling": false,
+            "reserved": false,
+            "skuname": "P1v2",
+            "skutier": "PremiumV2",
+            "skucapacity": 1,
+            "deploy": 1
+          },
+          {
+            "Name": "CTR01",
+            "kind": "linux",
+            "perSiteScaling": false,
+            "reserved": true, //true for containers
+            "skuname": "P1v2",
+            "skutier": "PremiumV2",
+            "skucapacity": 1,
+            "deploy": 1
+          }
+        ],
+        "WebSiteInfo": [
+          {
+            "Name": "WPS01",
+            "kind": "app",
+            "AppSVCPlan": "WPS01",
+            "saname": "diag",
+            "customDNS": 1,
+            "initialDeploy": 1
+          }
+        ],
+        "WebSiteContainerInfo": [
+          {
+            "Name": "CTR01",
+            "kind": "app,linux,container",
+            "AppSVCPlan": "CTR01",
+            "saname": "data",
+            "registry": "01",
+            "customDNS": 1,
+            "initialDeploy": 1
+            // "registryENV": "t5"
+          }
+        ],
+        "FunctionInfo": [
+          {
+            "Name": "DIS03",
+            "kind": "functionapp",
+            "AppSVCPlan": "ASP01",
+            "saname": "data",
+            "runtime": "dotnet",
+            "subnet": "snMT01",
+            "preWarmedCount": 1,
+            "customDNS": 1,
+            "initialDeploy": 0
+          },
+          {
+            "Name": "PS02",
+            "kind": "functionapp",
+            "AppSVCPlan": "ASP01",
+            "saname": "data",
+            "runtime": "powershell",
+            "subnet": "snMT01",
+            "preWarmedCount": 1,
+            "customDNS": 1,
+            "initialDeploy": 1
+          }
+        ]
+      }
+    }
+  }
+}

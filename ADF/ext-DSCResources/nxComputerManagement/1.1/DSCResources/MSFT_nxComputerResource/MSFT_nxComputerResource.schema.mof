@@ -1,0 +1,13 @@
+
+
+[ClassVersion("1.0.0"), FriendlyName("nxComputer")] 
+class MSFT_nxComputerResource : OMI_BaseResource
+{
+    [key] string Name;
+    [Write] string DNSDomainName;
+    [Write] string TimeZoneName;
+    [Write] string AlternateTimeZoneName;
+
+};
+		
+
